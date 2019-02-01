@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.ehcache.org/ehcache.xsd"
+         updateCheck="true"
+         monitoring="autodetect"
+         dynamicConfig="true">
+
+	<defaultCache
+      eternal = "false"
+      maxElementsInMemory = "10000"
+      timeToLiveSeconds = "120"
+      memoryStoreEvictionPolicy = "LRU"/>
+
+	 <cache	
+	  name="member"
+	  maxElementsInMemory = "100"
+	  timeToLiveSeconds = "120"
+      memoryStoreEvictionPolicy = "LRU"/>
+
+	 <cache	
+	  name="functiontest"
+	  maxElementsInMemory = "100"
+	  timeToLiveSeconds = "120"
+      memoryStoreEvictionPolicy = "LRU"/>
+      
+</ehcache>

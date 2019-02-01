@@ -1,0 +1,81 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="fragments/layout">
+<head>
+<meta charset="UTF-8">
+<title>home</title>
+</head>
+<body>
+	<div layout:fragment="content">
+
+		<form th:action="@{/dispatchToDemo}" method="get"  th:object="${command}">
+			<table>
+				<tr>
+					<td><select  th:field="*{name}" >
+							<option value="">Choosing</option>
+							<option th:each="functionName : ${allFunctionName}"
+								th:value="${functionName}" th:text="${functionName}"></option>
+					</select></td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="Entry" /></td>
+				</tr>
+			</table>
+		</form>
+
+
+		<!-- 		<form th:action="@{/jpa/signUpPage}" method="get"> -->
+		<!-- 			<table> -->
+		<!-- 				<tr> -->
+		<!-- 					<td><input type="submit" value="SignUp" /></td> -->
+		<!-- 				</tr> -->
+		<!-- 			</table> -->
+		<!-- 		</form> -->
+		<!-- 		<form th:action="@{/quartz/demo}" method="get"> -->
+		<!-- 			<table> -->
+		<!-- 				<tr> -->
+		<!-- 					<td><input type="submit" value="Quartz" /></td> -->
+		<!-- 				</tr> -->
+		<!-- 			</table> -->
+		<!-- 		</form> -->
+		<!-- 		<form th:action="@{/throwException}" method="get"> -->
+		<!-- 			<table> -->
+		<!-- 				<tr> -->
+		<!-- 					<td><input type="submit" value="ExceptionHandler" /></td> -->
+		<!-- 				</tr> -->
+		<!-- 			</table> -->
+		<!-- 		</form> -->
+		<!-- 		<form th:action="@{/cache/demo}" method="get"> -->
+		<!-- 			<table> -->
+		<!-- 				<tr> -->
+		<!-- 					<td><input type="submit" value="Cache" /></td> -->
+		<!-- 				</tr> -->
+		<!-- 			</table> -->
+		<!-- 		</form> -->
+		<!-- 		<form th:action="@{/async/demo}" method="get"> -->
+		<!-- 			<table> -->
+		<!-- 				<tr> -->
+		<!-- 					<td><input type="submit" value="Async" /></td> -->
+		<!-- 				</tr> -->
+		<!-- 			</table> -->
+		<!-- 		</form> -->
+
+		<!-- 		<form th:action="@{/batch/demo}" method="get"> -->
+		<!-- 			<table> -->
+		<!-- 				<tr> -->
+		<!-- 					<td><input type="submit" value="Batch" /></td> -->
+		<!-- 				</tr> -->
+		<!-- 			</table> -->
+		<!-- 		</form> -->
+
+		<!-- 		<form th:action="@{/file/demo}" method="get"> -->
+		<!-- 			<table> -->
+		<!-- 				<tr> -->
+		<!-- 					<td><input type="submit" value="File" /></td> -->
+		<!-- 				</tr> -->
+		<!-- 			</table> -->
+		<!-- 		</form> -->
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="fragments/layout">
+<head>
+<meta charset="UTF-8">
+<title>demo</title>
+</head>
+<body>
+	<div layout:fragment="content">
+		<form th:action="@{/quartz/getJob}" method="get">
+			<table>
+				<tr>
+					<td><input type="submit" value="GetJob" /></td>
+				</tr>
+			</table>
+		</form>
+
+		<form th:action="@{/quartz/pause}" method="get">
+			<table>
+				<tr>
+					<td><input type="submit" value="Pause" /></td>
+				</tr>
+			</table>
+		</form>
+
+		<form th:action="@{/quartz/resume}" method="get">
+			<table>
+				<tr>
+					<td><input type="submit" value="Resume" /></td>
+				</tr>
+			</table>
+		</form>
+
+	</div>
+</body>
+</html>

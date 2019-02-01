@@ -1,0 +1,20 @@
+### Eclipse template
+*.pydevproject
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+
+# Eclipse Core
+.project
+
+# "temporary" build files
+/target
+/log/
+/.classpath

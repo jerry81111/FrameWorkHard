@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<configuration>
+	<property name="charset" value="UTF-8" />
+	<property name="logger.level" value="DEBUG" />
+	<property name="filename.pattern"
+		value="_%d{yyyy-MM-dd_HH}.log.log" />
+	<property name="encoder.pattern"
+		value="%d{HH:mm:ss.SSS} %-5level %logger{0}[%M:%L] - traceId:[%X{traceId}] - %msg%n" />
+
+	<appender name="consoleLog"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>${encoder.pattern}</pattern>
+			<charset>${charset}</charset>
+		</encoder>
+	</appender>
+
+	<appender name="fileLog"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>log/${filename.pattern}</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>
+				${encoder.pattern}
+			</pattern>
+			<charset>${charset}</charset>
+		</encoder>
+	</appender>
+
+	<root level="${logger.level}">
+		<appender-ref ref="consoleLog" />
+	</root>
+
+	<logger name="tw.com.jerry" level="${logger.level}" additivity="false">
+		<appender-ref ref="consoleLog" />
+		<!-- <appender-ref ref="fileLog" /> -->
+	</logger>
+
+
+</configuration>

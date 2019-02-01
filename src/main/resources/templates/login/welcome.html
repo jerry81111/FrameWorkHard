@@ -1,0 +1,16 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="fragments/layout">
+<head>
+<meta charset="UTF-8">
+<title>welcome</title>
+</head>
+<body>
+	<div layout:fragment="content">
+		<h1>Welcome!</h1>
+		<p>
+			Click <a th:href="@{/home}">here</a> to home.
+		</p>
+	</div>
+</body>
+</html>
