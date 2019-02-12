@@ -1,4 +1,4 @@
-# FrameWorkHard
+# Spring Famework Practicing
 
 The project is using commonly spring library to build.
 
