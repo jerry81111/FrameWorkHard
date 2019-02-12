@@ -10,11 +10,12 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>frameworkhard</artifactId>
+	<artifactId>spring</artifactId>
 	<version>0.1</version>
 	<packaging>war</packaging>
-	<name>frameworkhard</name>
-	<description>framework workhard</description>
+	
+	<name>SpringFramework</name>
+	<description>spring commonly used</description>
 
 	<properties>
 		<java.version>1.8</java.version>
