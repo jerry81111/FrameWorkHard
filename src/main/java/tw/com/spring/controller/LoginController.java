@@ -54,7 +54,7 @@ public class LoginController {
 			functionPo=cacheService.getAllFunction().get(functionPo.getName());
 			
 			if (functionPo.getUrl() != null) {
-				destination = "redirect:/"+functionPo.getUrl();
+				destination = "redirect:"+functionPo.getUrl();
 			} else {
 				destination = functionPo.getName() + "/demo";
 			}

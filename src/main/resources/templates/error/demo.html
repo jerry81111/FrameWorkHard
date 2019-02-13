@@ -1,0 +1,34 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="fragments/layout">
+<head>
+<meta charset="UTF-8">
+<title>demo</title>
+</head>
+<body>
+	<div layout:fragment="content">
+
+		<form th:action="@{/error/exception}" method="get">
+			<table>
+				<tr>
+					<td><input type="submit" value="ThrowException" /></td>
+				</tr>
+			</table>
+		</form>
+		<form th:action="@{/error/fileNotFoundException}" method="get">
+			<table>
+				<tr>
+					<td><input type="submit" value="ThrowFileNotFoundException" /></td>
+				</tr>
+			</table>
+		</form>
+		<form th:action="@{/error/exception}" method="get">
+			<table>
+				<tr>
+					<td><input type="submit" value="ThrowException" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
