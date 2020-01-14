@@ -18,7 +18,6 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		<cccc>dddd</cccc>
 	</properties>
 	<dependencies>
 		<dependency>
